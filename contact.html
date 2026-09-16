@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact Us | GradWrite Solution</title><meta name="description" content="GradWrite Solution provides professional academic, research, nursing, editing and professional writing support across disciplines."><link rel="stylesheet" href="styles.css"></head><body><div class="topbar">Professional Academic &amp; Research Support</div>
+<header><nav class="nav">
+<a class="brand" href="index.html" aria-label="GradWrite Solution home">
+<img src="assets/gradwrite-solution-logo.jpeg" alt="GradWrite Solution">
+<span class="brand-name"><span class="grad">Grad</span><span class="write">Write</span> Solution</span>
+</a>
+<div class="navlinks"><a class="" href="index.html">Home</a><a class="" href="about.html">About</a><a class="" href="services.html">Services</a><a class="" href="nursing.html">Nursing</a><a class="" href="process.html">How It Works</a><a class="cta" href="contact.html">Contact Us</a></div>
+</nav></header><main>
+<section class="page-hero"><div class="container"><div class="eyebrow">Contact GradWrite Solution</div><h1>Tell us what you need.</h1><p>Use the form below to start a conversation. For a faster response, you can also message us directly on WhatsApp.</p></div></section>
+<section class="section"><div class="container"><div class="contact-grid">
+<div class="contact-box"><div class="eyebrow">Let's talk</div><h2>Have a project in mind?</h2><p>Send the details you have. We'll use them to understand the type of support you are looking for.</p>
+<div class="contact-item"><small>WhatsApp</small><strong>+1 (917) 695-2447</strong></div>
+<div class="contact-item"><small>Email</small><strong>gradwritesolution@gmail.com</strong></div>
+<a class="btn btn-gold" href="#message-form">Chat on WhatsApp</a>
+</div>
+<form id="message-form" onsubmit="sendToWhatsApp(event)">
+<h3>Send Us a Message</h3><p class="form-note">Fill out the form and your message will be prepared for WhatsApp.</p>
+<div class="form-row"><div><label for="name">Your Name *</label><input id="name" required placeholder="Enter your full name"></div><div><label for="email">Email Address *</label><input id="email" type="email" required placeholder="you@example.com"></div></div>
+<label for="service">Service Needed *</label><select id="service" required><option value="">Select a service</option><option>Academic Writing & Coursework</option><option>Research & Graduate Projects</option><option>Nursing Support</option><option>PPT, Posters & Visuals</option><option>Editing & Proofreading</option><option>CV, Resume & Professional Writing</option><option>Data & Presentation Support</option><option>Other</option></select>
+<label for="details">Project Details *</label><textarea id="details" required placeholder="Tell us about your project, deadline, requirements, and any specific instructions..."></textarea>
+<div class="buttons">
+<button class="btn btn-gold" type="submit">💬 Send via WhatsApp</button>
+<button class="btn btn-light" type="button" onclick="sendByEmail()">✉ Send via Email</button>
+</div>
+<p class="form-note">Choose WhatsApp or Email after completing the form.</p>
+</form>
+</div></div></section>
+</main>
+<script>
+function sendToWhatsApp(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim();
+ const email=document.getElementById('email').value.trim();
+ const service=document.getElementById('service').value;
+ const details=document.getElementById('details').value.trim();
+ const text=`Hello GradWrite Solution,%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AService Needed: ${encodeURIComponent(service)}%0A%0AProject Details:%0A${encodeURIComponent(details)}`;
+ window.open('https://wa.me/19176952447?text='+text,'_blank');
+}
+function sendByEmail(){
+ const name=document.getElementById('name').value.trim();
+ const email=document.getElementById('email').value.trim();
+ const service=document.getElementById('service').value;
+ const details=document.getElementById('details').value.trim();
+ if(!name || !email || !service || !details){
+   alert('Please complete all required fields before sending.');
+   return;
+ }
+ const subject=encodeURIComponent('GradWrite Solution Inquiry - '+service);
+ const body=encodeURIComponent(
+   'Hello GradWrite Solution,\n\n' +
+   'Name: '+name+'\n' +
+   'Email: '+email+'\n' +
+   'Service Needed: '+service+'\n\n' +
+   'Project Details:\n'+details
+ );
+ window.location.href='mailto:gradwritesolution@gmail.com?subject='+subject+'&body='+body;
+}
+
+</script><footer><div class="container"><div class="footer-grid">
+<div><h3>GradWrite Solution</h3><p>Professional academic, research, nursing, editing and professional writing support across disciplines.</p></div>
+<div><h3>Explore</h3><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="nursing.html">Nursing Support</a></li><li><a href="process.html">How It Works</a></li></ul></div>
+<div><h3>Contact</h3><ul><li>WhatsApp: +1 (917) 695-2447</li><li>gradwritesolution@gmail.com</li><li><a href="contact.html">Send Us a Message →</a></li></ul></div>
+</div><div class="fine">© 2026 GradWrite Solution. All rights reserved.</div></div></footer><a class="whatsapp" href="contact.html#message-form"><span class="bubble">◌</span> Chat with us</a></body></html>

@@ -1,17 +1,26 @@
-# GradWrite Solution Website
+# GradWrite Solution — Multi-Page Website
 
-Official static website for GradWrite Solution.
+This version is intentionally structured as separate pages rather than one long scrolling page.
 
-- Deep teal and gold theme
-- Official logo in `assets/gradwrite-solution-logo.jpeg`
+Pages:
+- `index.html` — Home
+- `about.html` — About
+- `services.html` — Services
+- `nursing.html` — Nursing
+- `process.html` — How It Works
+- `contact.html` — Contact Us
+
+Brand:
+- Official logo: `assets/gradwrite-solution-logo.jpeg`
+- Deep teal + gold theme
+- GradWrite Solution text beside the logo
+
+Contact:
 - WhatsApp: +1 (917) 695-2447
 - Email: gradwritesolution@gmail.com
 
-The site includes academic writing, research, weekly discussion posts,
-PowerPoint presentations, posters, nursing coursework, Shadow Health,
-SOAP Notes, lab assignments/reports, care plans, case studies, PICOT,
-EBP, thesis/dissertation support, editing, data presentation, CV/resume,
-translation, and technical writing.
+The floating "Chat with us" button is visible across the site and opens WhatsApp.
+The contact form also prepares the enquiry in WhatsApp.
 
-This is a static HTML/CSS/JavaScript site and can be published with GitHub Pages.
-The enquiry form opens WhatsApp directly and does not require a backend.
+GitHub Pages:
+Upload all files/folders to the root of the repository and deploy from `main` / root.

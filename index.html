@@ -1,173 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="GradWrite Solution — professional academic, research, editing, thesis, dissertation and professional writing support.">
-<title>GradWrite Solution | Academic & Research Support</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
-:root{
- --teal:#183942;--teal2:#102a31;--gold:#d4a84f;--cream:#f6f3eb;--paper:#fcfaf5;
- --ink:#1e292d;--muted:#657278;--line:#dce3e2;--red:#a64b3c;
- --serif:'Libre Baskerville',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--hand:'Caveat',cursive;
-}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65}
-a{text-decoration:none;color:inherit}.wrap{width:min(1140px,92%);margin:auto}
-.top{background:var(--teal2);color:#d8e1e2;font-size:12px;padding:8px 0}.top .wrap{display:flex;justify-content:space-between}
-header{position:sticky;top:0;z-index:50;background:rgba(246,243,235,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{height:86px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:9px;min-width:0}
-.logo img{display:block;width:70px;height:62px;object-fit:contain;object-position:center;filter:drop-shadow(0 2px 4px rgba(16,42,49,.08))}
-.logo-text{font-family:var(--serif);font-size:20px;font-weight:700;white-space:nowrap}
-.logo-text .g{color:var(--teal)}.logo-text .w{color:var(--gold)}
-.navlinks{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:600;color:#536267}.navlinks a:hover{color:var(--teal)}
-.cta{background:var(--teal);color:#fff;padding:11px 18px;border-radius:4px}.cta:hover{background:var(--teal2)}
-.menu{display:none;border:0;background:none;font-size:26px;color:var(--teal)}
-.hero{padding:100px 0 92px;background:radial-gradient(circle at 86% 17%,rgba(212,168,79,.12),transparent 24%),var(--cream);border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1fr 280px;gap:65px;align-items:center}
-.kicker{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:18px}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,6vw,67px);line-height:1.12;letter-spacing:-1.5px;color:var(--teal2);max-width:12ch}
-h1 em{font-style:normal;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:8px}
-.lede{font-size:18px;color:var(--muted);max-width:650px;margin:22px 0 30px}
-.buttons{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.btn{display:inline-flex;padding:13px 23px;border-radius:4px;font-size:14px;font-weight:700}.primary{background:var(--teal);color:#fff}.secondary{border-bottom:1px solid var(--teal);color:var(--teal);border-radius:0;padding-left:2px;padding-right:2px}
-.note{font-family:var(--hand);font-size:24px;color:var(--red);transform:rotate(-4deg);padding-top:28px}.note:before{content:"↙";font-family:var(--sans);font-size:16px;margin-right:7px}
-.paper-card{background:var(--paper);border:1px solid var(--line);padding:26px;box-shadow:0 18px 45px rgba(24,57,66,.09);transform:rotate(1.3deg)}
-.paper-card .stamp{font-size:10px;letter-spacing:1.5px;color:var(--gold);font-weight:700;margin-bottom:20px}.paper-line{border-bottom:1px solid #e5e0d3;padding:11px 0;font-family:var(--serif);font-size:14px;color:#536067}.paper-line:first-of-type{border-top:1px solid #e5e0d3}.scribble{font-family:var(--hand);color:var(--red);font-size:21px;margin-top:17px}
-.trust{background:var(--teal);color:#e9eeee}.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}.trust div{padding:18px 15px;text-align:center;border-right:1px solid rgba(255,255,255,.13);font-size:12px;font-weight:600}.trust div:last-child{border:0}
-section{padding:92px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:1fr 2fr;gap:50px;margin-bottom:48px}.section-head h2{font-family:var(--serif);font-weight:400;font-size:34px;color:var(--teal2);line-height:1.2}.section-head p{max-width:650px;color:var(--muted)}
-.entries{border-top:1px solid var(--line)}.entry{display:grid;grid-template-columns:70px 1fr 220px;gap:25px;padding:28px 0;border-bottom:1px solid var(--line)}.mark{font-family:monospace;color:var(--gold);font-size:13px}.entry h3{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--teal);margin-bottom:7px}.entry p{font-size:14px;color:var(--muted);max-width:650px}.annotation{border-left:1px dashed #cfd7d5;padding-left:18px;color:var(--red);font-family:monospace;font-size:11px;padding-top:3px}
-.special{background:var(--teal2);color:#fff}.special .section-head h2{color:#fff}.special .section-head p{color:#c7d3d5}.specgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}.taglist{display:flex;flex-wrap:wrap;gap:9px;margin-top:27px}.tag{border:1px solid #3a555b;padding:7px 12px;border-radius:3px;color:#d8e0e1;font-family:monospace;font-size:12px}.specbox{background:var(--teal);border:1px solid #2e4b52;padding:27px}.specbox li{list-style:none;padding:12px 0;border-top:1px solid #38545a;color:#dbe3e4;font-size:13px}.specbox li:first-child{border:0}.specbox li:before{content:"✓";color:var(--gold);margin-right:10px}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.step{background:var(--paper);padding:28px}.step .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:15px}.step h3{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--teal);margin:10px 0}.step p{font-size:13px;color:var(--muted)}
-.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.aboutlead{font-family:var(--serif);font-size:20px}.about p{color:var(--muted);margin-bottom:17px}.signature{font-family:var(--hand);font-size:28px;color:var(--teal);margin-top:22px}.quality{list-style:none}.quality li{border-bottom:1px solid var(--line);padding:15px 0}.quality b{display:block;font-family:var(--serif);font-weight:400;color:var(--teal)}.quality span{font-size:13px;color:var(--muted)}
-.portfolio{background:var(--paper)}.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.sample{border:1px solid var(--line);background:#fff;padding:23px;min-height:190px;position:relative;overflow:hidden}.sample:after{content:"GWS";position:absolute;right:-8px;bottom:-18px;font-family:var(--serif);font-size:80px;color:#eef1ee}.sample small{color:var(--gold);font-family:monospace}.sample h3{font-family:var(--serif);font-weight:400;color:var(--teal);margin:18px 0 8px}.sample p{font-size:13px;color:var(--muted);max-width:42ch}
-.sample ul{list-style:none;margin:16px 0 15px;position:relative;z-index:1}
-.sample li{font-size:12px;color:#5e6c70;margin:6px 0;padding-left:15px;position:relative}
-.sample li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
-.sample a{position:relative;z-index:1;display:inline-block;color:var(--teal);font-size:12px;font-weight:700;border-bottom:1px solid var(--gold);padding-bottom:2px}
-.sample h3,.sample p,.sample ul,.sample a{position:relative;z-index:1}
-.contact{background:var(--paper)}.contactgrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:42px;align-items:center}.contactbox{background:var(--teal);color:#fff;padding:35px;border-radius:4px}.contactbox h2{font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.2}.contactbox p{color:#cbd7d9;margin:13px 0 24px}.contactline{border-top:1px solid rgba(255,255,255,.15);padding:13px 0;font-size:13px}.contactline b{display:block;color:#fff}.form{background:#fff;border:1px solid var(--line);padding:32px;box-shadow:0 10px 30px rgba(24,57,66,.05)}.form h2{font-family:var(--serif);font-weight:400;color:var(--teal2);font-size:26px}.formintro{font-size:13px;color:var(--muted);margin:6px 0 21px}.row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:14px}.field label{display:block;font-size:11px;font-weight:700;color:#4f5d61;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #d4dedd;background:#fcfcfa;padding:11px;border-radius:3px;font:inherit;font-size:13px;color:var(--ink)}.field textarea{min-height:105px;resize:vertical}.send{width:100%;border:0;background:var(--teal);color:#fff;padding:13px;border-radius:4px;font-weight:700;cursor:pointer}.formnote{text-align:center;color:#7b878a;font-size:10px;margin-top:12px}
-footer{background:#0b2229;color:#aab8bb;padding:48px 0 25px}.footergrid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;align-items:center}.flogo{font-family:var(--serif);font-size:19px;color:#fff}.flogo span{color:var(--gold)}.flinks{display:flex;gap:22px;font-size:12px}.flinks a:hover{color:#fff}.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;font-size:10px}
-.reveal{opacity:0;transform:translateY(12px);animation:up .7s ease forwards}.d2{animation-delay:.12s}.d3{animation-delay:.24s}@keyframes up{to{opacity:1;transform:none}}
-@media(max-width:850px){.navlinks{display:none}.menu{display:block}.hero-grid,.specgrid,.aboutgrid,.contactgrid{grid-template-columns:1fr}.note{display:none}.trust .wrap{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:0}.entry{grid-template-columns:45px 1fr}.annotation{display:none}.process{grid-template-columns:1fr 1fr}.portfolio-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.top{display:none}nav{height:72px}.logo img{width:56px;height:54px}.logo-text{font-size:17px}.hero{padding:70px 0}.section-head{grid-template-columns:1fr;gap:12px}.section-head h2{font-size:29px}.process,.portfolio-grid,.row{grid-template-columns:1fr}.trust div{border-right:0;border-bottom:1px solid rgba(255,255,255,.13)}.form{padding:23px}.contactbox{padding:28px}}
-</style>
-</head>
-<body>
-<div class="top"><div class="wrap"><span>Professional Academic & Research Support</span><span>Confidential • Personalized • Quality-Focused</span></div></div>
-<header><nav class="wrap">
-<a class="logo" href="#home" aria-label="GradWrite Solution home">
-  <img src="gradwrite-solution-logo.jpeg" alt="GradWrite Solution">
-  <span class="logo-text"><span class="g">Grad</span><span class="w">Write</span> Solution</span>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Academic & Research Support | GradWrite Solution</title><meta name="description" content="GradWrite Solution provides professional academic, research, nursing, editing and professional writing support across disciplines."><link rel="stylesheet" href="styles.css"></head><body><div class="topbar">Professional Academic &amp; Research Support</div>
+<header><nav class="nav">
+<a class="brand" href="index.html" aria-label="GradWrite Solution home">
+<img src="assets/gradwrite-solution-logo.jpeg" alt="GradWrite Solution">
+<span class="brand-name"><span class="grad">Grad</span><span class="write">Write</span> Solution</span>
 </a>
-<div class="navlinks"><a href="#services">Services</a><a href="#process">How It Works</a><a href="#specialized">Specialized Support</a><a href="#about">About</a><a href="#contact" class="cta">Get a Quote</a></div>
-<button class="menu" onclick="toggleNav()" aria-label="Open menu">☰</button>
-</nav></header>
-
-<main id="home">
-<section class="hero"><div class="wrap hero-grid">
-<div>
-<div class="kicker reveal">Academic • Research • Professional</div>
-<h1 class="reveal d2">Your ideas deserve to be <em>understood.</em></h1>
-<p class="lede reveal d3">Professional support for academic writing, research, editing, thesis and dissertation projects — built around your goals, requirements and deadlines.</p>
-<div class="buttons reveal d3"><a class="btn primary" href="#contact">Start Your Project</a><a class="btn secondary" href="#services">Explore Services</a></div>
-</div>
-<div class="paper-card reveal d3"><div class="stamp">GRADWRITE / EDITORIAL NOTE</div><div class="paper-line">Research deserves clarity.</div><div class="paper-line">Structure supports your argument.</div><div class="paper-line">Evidence strengthens your work.</div><div class="paper-line">Presentation matters.</div><div class="scribble">Let's make it stronger →</div></div>
-</div></section>
-
-<div class="trust"><div class="wrap"><div>✓ Personalized Support</div><div>✓ Confidential Service</div><div>✓ Graduate-Level Focus</div><div>✓ Responsive Communication</div></div></div>
-
-<section id="services"><div class="wrap">
-<div class="section-head"><h2>What we can do for you</h2><p>From a single assignment to a long-term graduate research project, GradWrite Solution provides focused academic and professional support.</p></div>
-<div class="entries">
-<div class="entry"><div class="mark">01</div><div><h3>Essay & Academic Writing</h3><p>Support with essays, research papers, weekly discussion posts, PowerPoint presentations, case studies, lab assignments, lab reports, coursework and technical academic papers.</p></div><div class="annotation">clarity → structure → evidence</div></div>
-<div class="entry"><div class="mark">02</div><div><h3>Research Support</h3><p>Research questions, literature reviews, research proposals, evidence organization and methodology support across disciplines.</p></div><div class="annotation">define the problem first</div></div>
-<div class="entry"><div class="mark">03</div><div><h3>Thesis & Dissertation</h3><p>Chapter-level support, developmental editing, formatting, proofreading and research presentation for graduate projects.</p></div><div class="annotation">tighten scope →</div></div>
-<div class="entry"><div class="mark">04</div><div><h3>Editing & Proofreading</h3><p>Grammar, clarity, flow, academic tone, structure and consistency while preserving the writer's voice.</p></div><div class="annotation">line edit / final check</div></div>
-<div class="entry"><div class="mark">05</div><div><h3>Data & Visual Presentation</h3><p>Clear tables, figures, charts, results presentation and professional academic slides.</p></div><div class="annotation">label • simplify • explain</div></div>
-<div class="entry"><div class="mark">06</div><div><h3>Professional Writing</h3><p>CVs, resumes, professional documents, content writing and translation support.</p></div><div class="annotation">lead with outcomes</div></div>
+<div class="navlinks"><a class="active" href="index.html">Home</a><a class="" href="about.html">About</a><a class="" href="services.html">Services</a><a class="" href="nursing.html">Nursing</a><a class="" href="process.html">How It Works</a><a class="cta" href="contact.html">Contact Us</a></div>
+</nav></header><main>
+<section class="hero"><div class="container"><div class="hero-grid">
+<div><div class="eyebrow">GradWrite Solution</div><h1>Support for the work that matters.</h1><p>Professional academic, research and writing support tailored to your project, discipline and requirements.</p>
+<div class="buttons"><a class="btn btn-gold" href="services.html">Explore Our Services</a><a class="btn btn-light" href="contact.html">Contact Us</a></div></div>
+<div class="hero-note"><div class="eyebrow">What we support</div><h3>From weekly coursework to major research projects.</h3><p>Essays, discussion posts, research papers, PPTs, posters, nursing coursework, thesis, dissertation, editing and more.</p><p>Our writers and editors specialize in different subject areas and project types.</p></div>
 </div></div></section>
-
-<section id="specialized" class="special"><div class="wrap specgrid">
-<div><div class="section-head" style="display:block;margin-bottom:0"><h2>Specialized support across disciplines</h2><p>GradWrite Solution supports students and professionals across disciplines. We work with writers and editors who specialize in the subject areas and project types they handle, so each project can be matched with relevant expertise.</p></div>
-<div class="taglist"><span class="tag">Nursing</span><span class="tag">Business</span><span class="tag">Management</span><span class="tag">Healthcare</span><span class="tag">Psychology</span><span class="tag">Education</span><span class="tag">Social Sciences</span><span class="tag">Information Technology</span><span class="tag">Public Health</span><span class="tag">And More</span></div>
-<div class="section-head" style="display:block;margin:34px 0 0"><p style="color:#d8e0e1"><strong style="color:#fff">Nursing project support includes:</strong></p></div>
-<div class="taglist" style="margin-top:14px"><span class="tag">Shadow Health</span><span class="tag">SOAP Notes</span><span class="tag">Lab Assignments</span><span class="tag">Lab Reports</span><span class="tag">Care Plans</span><span class="tag">Case Studies</span><span class="tag">Clinical Documentation</span><span class="tag">PICOT</span><span class="tag">EBP</span><span class="tag">APA 7</span><span class="tag">Research</span></div></div>
-<div class="specbox"><ul><li>Writers and editors matched to discipline and project requirements</li><li>Nursing coursework support including Shadow Health, SOAP notes, labs and reports</li><li>Evidence-based writing, literature reviews and research support</li><li>Clinical case studies, care plans and professional documentation</li><li>Thesis, dissertation and graduate project support</li><li>APA, MLA, Chicago, Harvard, IEEE and other required styles</li></ul></div>
-</div></section>
-
-<section id="process"><div class="wrap"><div class="section-head"><h2>A simple process</h2><p>Clear communication from the first enquiry to the final agreed deliverable.</p></div>
-<div class="process"><div class="step"><div class="n">i.</div><h3>Tell us what you need</h3><p>Share your instructions, scope and deadline.</p></div><div class="step"><div class="n">ii.</div><h3>Receive your quote</h3><p>We review the project and confirm the service and timeline.</p></div><div class="step"><div class="n">iii.</div><h3>Support begins</h3><p>Your project receives focused, personalized attention.</p></div><div class="step"><div class="n">iv.</div><h3>Review & refine</h3><p>We complete the agreed revisions and final checks.</p></div></div></div></section>
-
-<section id="about"><div class="wrap aboutgrid"><div class="about"><p class="aboutlead">GradWrite Solution is a boutique academic and professional support service focused on helping clients communicate their ideas clearly and confidently.</p><p>We combine writing support, research guidance, editing, formatting and presentation expertise across disciplines. Our writers and editors specialize in the subject areas and project types they handle, allowing us to match each project with relevant expertise.</p><p>Every project is approached individually, with attention to requirements, structure, clarity and quality.</p><div class="signature">— GradWrite Solution</div></div><ul class="quality"><li><b>Personalized</b><span>Support shaped around your project rather than a one-size-fits-all package.</span></li><li><b>Quality-focused</b><span>Attention to language, structure, evidence, formatting and presentation.</span></li><li><b>Confidential</b><span>Client information and project materials are handled with care.</span></li><li><b>Professional</b><span>Clear communication, agreed timelines and responsive service.</span></li></ul></div></section>
-
-<section class="portfolio"><div class="wrap">
-<div class="section-head"><h2>Areas we support</h2><p>Explore the types of academic, research, nursing and professional projects our specialized writers and editors can support.</p></div>
-<div class="portfolio-grid">
-<div class="sample">
-<small>01 / ACADEMIC WRITING</small>
-<h3>Research Papers & Assignments</h3>
-<p>Build clear, well-organized academic work from the introduction through the conclusion.</p>
-<ul><li>Essays & research papers</li><li>Weekly discussion posts & peer replies</li><li>Case studies, reports & reflections</li><li>PowerPoint (PPT) presentations</li><li>Technical & academic papers</li></ul>
-<a href="#contact">Discuss your project →</a>
-</div>
-<div class="sample">
-<small>02 / RESEARCH & GRADUATE</small>
-<h3>Thesis & Dissertation</h3>
-<p>Support across the research journey, from planning and literature review to final presentation.</p>
-<ul><li>Research proposals & literature reviews</li><li>Methodology & framework support</li><li>Chapter editing & organization</li><li>Formatting, references & proofreading</li></ul>
-<a href="#contact">Discuss your project →</a>
-</div>
-<div class="sample">
-<small>03 / NURSING</small>
-<h3>Clinical & Coursework Support</h3>
-<p>Specialized support for nursing coursework and clinical documentation.</p>
-<ul><li>Shadow Health activities</li><li>SOAP Notes & clinical documentation</li><li>Lab assignments & lab reports</li><li>Care plans & case studies</li><li>PICOT & evidence-based practice</li></ul>
-<a href="#contact">Discuss your project →</a>
-</div>
-<div class="sample">
-<small>04 / EDITING</small>
-<h3>Editing & Proofreading</h3>
-<p>Improve clarity, flow, grammar and academic presentation while maintaining your intended voice.</p>
-<ul><li>Grammar & sentence-level editing</li><li>Structure & organization</li><li>Academic tone & clarity</li><li>Final proofreading</li></ul>
-<a href="#contact">Discuss your project →</a>
-</div>
-<div class="sample">
-<small>05 / DATA & PRESENTATION</small>
-<h3>Data & Visual Presentation</h3>
-<p>Present information in a way that is organized, readable and appropriate for academic or professional audiences.</p>
-<ul><li>PowerPoint (PPT) presentations & speaker notes</li><li>Academic posters & research posters</li><li>Tables, figures & charts</li><li>Results presentation & visual summaries</li><li>Infographics & professional presentation materials</li></ul>
-<a href="#contact">Discuss your project →</a>
-</div>
-<div class="sample">
-<small>06 / PROFESSIONAL</small>
-<h3>CV, Resume & Professional Writing</h3>
-<p>Polished professional documents for students, graduates, clinicians, researchers and professionals.</p>
-<ul><li>CVs & resumes</li><li>Professional documents</li><li>Content writing</li><li>Translation & language support</li></ul>
-<a href="#contact">Discuss your project →</a>
-</div>
+<section class="section"><div class="container"><div class="section-title"><h2>What can we help with?</h2><p>A clear starting point for students, researchers and professionals looking for specialized support.</p></div>
+<div class="cards">
+<div class="card"><h3>Academic Writing</h3><p>Support for everyday coursework and larger academic assignments.</p><ul><li>Essays & research papers</li><li>Weekly discussion posts</li><li>Case studies & reports</li><li>Technical papers</li></ul></div>
+<div class="card"><h3>Presentations</h3><p>Organized, professional materials for presenting academic work.</p><ul><li>PowerPoint presentations</li><li>Speaker notes</li><li>Academic & research posters</li><li>Infographics</li></ul></div>
+<div class="card"><h3>Nursing Support</h3><p>Specific support for nursing coursework and clinical documentation.</p><ul><li>Shadow Health</li><li>SOAP Notes</li><li>Lab assignments & reports</li><li>Care plans & PICOT</li></ul></div>
 </div></div></section>
-
-<section id="contact" class="contact"><div class="wrap contactgrid">
-<div class="contactbox"><h2>Let's discuss your project.</h2><p>Send us the details and we'll help you determine the next step.</p><div class="contactline"><b>WhatsApp</b>+1 (917) 695-2447</div><div class="contactline"><b>Email</b>gradwritesolution@gmail.com</div><div class="contactline"><b>Response</b>Online enquiries • Personalized support</div></div>
-<form class="form" onsubmit="sendWhatsApp(event)"><h2>Send Us a Message</h2><p class="formintro">Tell us what you're working on and we'll respond with the next steps.</p>
-<div class="row"><div class="field"><label for="name">YOUR NAME *</label><input id="name" required placeholder="Enter your full name"></div><div class="field"><label for="email">EMAIL ADDRESS *</label><input id="email" type="email" required placeholder="your.email@example.com"></div></div>
-<div class="row"><div class="field"><label for="service">SERVICE NEEDED *</label><select id="service" required><option value="">Select a service</option><option>Essay & Academic Writing</option><option>Research Paper Writing</option><option>Online Course Support</option><option>Exams & Assessments</option><option>Thesis Support</option><option>Dissertation Support</option><option>Technical Papers</option><option>Editing & Proofreading</option><option>Formatting & Referencing</option><option>Data & Visual Presentation</option><option>CV / Resume Writing</option><option>Translation</option><option>Other</option></select></div><div class="field"><label for="deadline">DEADLINE</label><input id="deadline" type="date"></div></div>
-<div class="field"><label for="details">PROJECT DETAILS *</label><textarea id="details" required placeholder="Please describe your project, academic level, word count and requirements..."></textarea></div>
-<button class="send" type="submit">➤ &nbsp; Send to WhatsApp</button><div class="formnote">Your information is used only to respond to your enquiry.</div><div id="formmsg" class="formnote"></div></form>
-</div></section>
-</main>
-
-<footer><div class="wrap"><div class="footergrid"><div class="flogo"><span>Grad</span>Write Solution</div><div class="flinks"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a><a href="mailto:gradwritesolution@gmail.com">Email</a></div><div>+1 (917) 695-2447</div></div><div class="copy">© 2026 GradWrite Solution. All rights reserved.</div></div></footer>
-<script>
-function toggleNav(){const n=document.querySelector('.navlinks');n.style.display=n.style.display==='flex'?'none':'flex';n.style.position='absolute';n.style.top='68px';n.style.left='0';n.style.right='0';n.style.background='var(--cream)';n.style.padding='20px';n.style.flexDirection='column';n.style.alignItems='flex-start';n.style.borderBottom='1px solid var(--line)'}
-function sendWhatsApp(e){
- e.preventDefault();
- const num='19176952447';
- const msg=`Hello GradWrite Solution,%0A%0AName: ${encodeURIComponent(document.getElementById('name').value)}%0AEmail: ${encodeURIComponent(document.getElementById('email').value)}%0AService: ${encodeURIComponent(document.getElementById('service').value)}%0ADeadline: ${encodeURIComponent(document.getElementById('deadline').value||'Not specified')}%0AProject Details: ${encodeURIComponent(document.getElementById('details').value)}`;
- window.open(`https://wa.me/${num}?text=${msg}`,'_blank');
- document.getElementById('formmsg').textContent='Opening WhatsApp…';
-}
-</script>
-</body></html>
+<section class="band"><div class="container"><div class="band-grid"><div><div class="eyebrow">Across disciplines</div><h2>Specialized expertise for different project types.</h2></div><div><p>We support work across Nursing, Business, Healthcare, Management, Psychology, Education, Social Sciences, Information Technology, Public Health and more.</p><div class="tags"><span class="tag">Nursing</span><span class="tag">Business</span><span class="tag">Healthcare</span><span class="tag">Psychology</span><span class="tag">Education</span><span class="tag">IT</span><span class="tag">Public Health</span><span class="tag">More</span></div></div></div></div></section>
+<section class="section alt"><div class="container"><div class="section-title"><h2>Ready to talk?</h2><p>Tell us what you are working on, what you need, and any requirements you have.</p></div><a class="btn btn-gold" href="contact.html">Contact Us</a></div></section>
+</main><footer><div class="container"><div class="footer-grid">
+<div><h3>GradWrite Solution</h3><p>Professional academic, research, nursing, editing and professional writing support across disciplines.</p></div>
+<div><h3>Explore</h3><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="nursing.html">Nursing Support</a></li><li><a href="process.html">How It Works</a></li></ul></div>
+<div><h3>Contact</h3><ul><li>WhatsApp: +1 (917) 695-2447</li><li>gradwritesolution@gmail.com</li><li><a href="contact.html">Send Us a Message →</a></li></ul></div>
+</div><div class="fine">© 2026 GradWrite Solution. All rights reserved.</div></div></footer><a class="whatsapp" href="contact.html#message-form"><span class="bubble">◌</span> Chat with us</a></body></html>
