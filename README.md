@@ -1,26 +1,22 @@
-# GradWrite Solution — Multi-Page Website
+# GradWrite Solution — SEO-Optimized Multi-Page Website
 
-This version is intentionally structured as separate pages rather than one long scrolling page.
+Official website: https://gradwritesolution.com/
 
 Pages:
-- `index.html` — Home
-- `about.html` — About
-- `services.html` — Services
-- `nursing.html` — Nursing
-- `process.html` — How It Works
-- `contact.html` — Contact Us
+- Home
+- About
+- Services
+- Nursing
+- How It Works
+- Contact Us
 
-Brand:
-- Official logo: `assets/gradwrite-solution-logo.jpeg`
-- Deep teal + gold theme
-- GradWrite Solution text beside the logo
+SEO additions:
+- Page-specific titles and meta descriptions
+- Canonical URLs
+- Open Graph and Twitter metadata
+- Organization structured data
+- robots.txt
+- sitemap.xml
+- GitHub Pages CNAME
 
-Contact:
-- WhatsApp: +1 (917) 695-2447
-- Email: gradwritesolution@gmail.com
-
-The floating "Chat with us" button is visible across the site and opens WhatsApp.
-The contact form also prepares the enquiry in WhatsApp.
-
-GitHub Pages:
-Upload all files/folders to the root of the repository and deploy from `main` / root.
+Deploy from the `main` branch and repository root.
